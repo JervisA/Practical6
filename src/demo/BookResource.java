@@ -1,15 +1,12 @@
 package demo;
 
-/**
- * Created by Jervis on 14/11/2016.
- */
 
-        import com.google.gson.Gson;
+import com.google.gson.Gson;
 
-        import javax.ws.rs.GET;
-        import javax.ws.rs.Path;
-        import javax.ws.rs.Produces;
-        import javax.ws.rs.core.MediaType;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
 @Path("/book")
 public class BookResource {

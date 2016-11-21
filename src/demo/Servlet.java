@@ -1,8 +1,5 @@
 package demo;
 
-/**
- * Created by Jervis on 14/11/2016.
- */
 import com.google.gson.Gson;
 
 import javax.servlet.ServletException;
@@ -13,19 +10,28 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "Servlet", urlPatterns = "/servlet")
+/**
+ * Created by 151447c on 11/14/2016.
+ */
+@WebServlet(name = "BookServlet",urlPatterns = "/book")
 public class Servlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Book b = new Book();
         Gson gson = new Gson();
-        String json = gson.toJson(b);
+
+        Book book = new Book();
+
+        String json = gson.toJson(book);
+
         response.setContentType("application/json");
+
         PrintWriter out = response.getWriter();
+
         out.println(json);
+
         out.close();
     }
 }
